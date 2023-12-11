@@ -9,6 +9,17 @@ const Validation = {
     }
   },
 
+  isValidLength: (numbers) => {
+    const numberArray = numbers.split('');
+    const convertedNumberArray = numberArray.map(Number);
+
+    if (convertedNumberArray.length !== 3) {
+      throw new Error(
+        '[ERROR] 유효하지 않은 숫자입니다. 서로 다른 숫자 3개를 입력해주세요.',
+      );
+    }
+  },
+
   isDifferentNumber: (numbers) => {
     const numberArray = numbers.split('');
     const convertedNumberArray = numberArray.map(Number);
