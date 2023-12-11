@@ -35,6 +35,14 @@ class Computer {
 
     return baseballCounter;
   }
+
+  showResult(userNumbers) {
+    const { strike, ball } = this.#calculateResult(userNumbers);
+    return new Map([
+      ['스트라이크', strike],
+      ['볼', ball],
+    ]);
+  }
 }
 
 export default Computer;
