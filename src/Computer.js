@@ -13,9 +13,11 @@ class Computer {
       const number = Random.pickNumberInRange(1, 9);
       answer.add(number);
     }
-    this.#answer = answer;
 
-    return answer;
+    const convertedAnswer = Array.from(answer).join('');
+    this.#answer = convertedAnswer;
+
+    return convertedAnswer;
   }
 }
 
