@@ -24,7 +24,7 @@ class GameManager {
     return baseballCounter;
   }
 
-  showResult(userNumbers) {
+  getResult(userNumbers) {
     const { strike, ball } = this.#calculateResult(userNumbers);
     return new Map([
       ['스트라이크', strike],
