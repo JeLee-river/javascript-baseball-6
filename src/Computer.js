@@ -14,10 +14,10 @@ class Computer {
       answer.add(number);
     }
 
-    const convertedAnswer = Array.from(answer).join('');
-    this.#answer = convertedAnswer;
+    const answerArray = Array.from(answer);
+    this.#answer = answerArray;
 
-    return convertedAnswer;
+    return answerArray;
   }
 }
 
