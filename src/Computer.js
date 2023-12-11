@@ -31,9 +31,9 @@ class Computer {
       if (foundIndex !== -1) {
         baseballCounter.ball += 1;
       }
-
-      return baseballCounter;
     });
+
+    return baseballCounter;
   }
 }
 
