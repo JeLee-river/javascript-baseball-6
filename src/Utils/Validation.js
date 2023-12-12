@@ -29,6 +29,16 @@ const Validation = {
     }
   },
 
+  isRestartNumberInRange: (number) => {
+    const convertedNumber = Number(number);
+
+    if (convertedNumber !== 1 && convertedNumber !== 2) {
+      throw new Error(
+        '[ERROR] 유효하지 않은 숫자입니다. 재시작은 1, 종료는 2를 입력해주세요.',
+      );
+    }
+  },
+
   isValidLength: (numberArray) => {
     const convertedNumberArray = numberArray.map(Number);
 
