@@ -1,3 +1,9 @@
+export const GAME_RESULT = {
+  strike: '스트라이크',
+  ball: '볼',
+  nothing: '낫싱',
+};
+
 export const MESSAGE = {
   prefix: `[ERROR]`,
   isNotEmptyString: `${prefix} 공백이 포함되어 있습니다. 숫자는 연달아서 입력해주세요.`,

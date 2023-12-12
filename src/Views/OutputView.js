@@ -1,9 +1,10 @@
 import { Console } from '@woowacourse/mission-utils';
+import { GAME_RESULT } from '../Utils/Constants';
 
 const OutputView = {
   printGameResult(result) {
     if (result.size === 0) {
-      Console.print('낫싱');
+      Console.print(GAME_RESULT.nothing);
       return;
     }
 
