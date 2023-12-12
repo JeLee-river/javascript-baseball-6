@@ -1,5 +1,5 @@
 import { Console } from '@woowacourse/mission-utils';
-import { GAME_RESULT } from '../Utils/Constants';
+import { GAME_RESULT, PLAY_MESSAGE } from '../Utils/Constants';
 
 const OutputView = {
   printGameResult(result) {
@@ -11,6 +11,10 @@ const OutputView = {
     result.forEach((count, resultCategory) => {
       Console.print(`${count}${resultCategory}`);
     });
+  },
+
+  printStartMessage() {
+    Console.print(PLAY_MESSAGE.start);
   },
 };
 
