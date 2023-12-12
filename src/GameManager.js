@@ -40,10 +40,16 @@ class GameManager {
 
   getResult() {
     const { strike, ball } = this.#calculateResult(this.#numbers);
-    return new Map([
-      ['스트라이크', strike],
-      ['볼', ball],
-    ]);
+    const result = new Map();
+    if (ball !== 0) {
+      result.set('볼', ball);
+    }
+
+    if (strike !== 0) {
+      result.set('스트라이크', strike);
+    }
+
+    return result;
   }
 }
 
