@@ -38,8 +38,8 @@ class GameManager {
     return baseballCounter;
   }
 
-  getResult(userNumbers) {
-    const { strike, ball } = this.#calculateResult(userNumbers);
+  getResult() {
+    const { strike, ball } = this.#calculateResult(this.#numbers);
     return new Map([
       ['스트라이크', strike],
       ['볼', ball],
