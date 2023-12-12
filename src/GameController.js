@@ -1,4 +1,5 @@
 import Validation from './Utils/Validation';
+import { GAME_RULES } from './Utils/Constants';
 
 class GameController {
   #restartOption;
@@ -14,7 +15,7 @@ class GameController {
   }
 
   hasStart() {
-    return this.#restartOption === 1;
+    return this.#restartOption === GAME_RULES.restart;
   }
 }
 export default GameController;

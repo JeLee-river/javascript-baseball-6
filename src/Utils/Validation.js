@@ -1,4 +1,4 @@
-import { MESSAGE } from './Constants';
+import { MESSAGE, GAME_RULES } from './Constants';
 
 const Validation = {
   isNotEmptyString: (number) => {
@@ -23,7 +23,10 @@ const Validation = {
       throw new Error(MESSAGE.isAnswerInteger);
     }
 
-    if (convertedNumber < 1 || convertedNumber > 9) {
+    if (
+      convertedNumber < GAME_RULES.minimumNumber ||
+      convertedNumber > GAME_RULES.maximumNumber
+    ) {
       throw new Error(MESSAGE.isAnswerNumberInRange);
     }
   },
@@ -31,7 +34,10 @@ const Validation = {
   isRestartNumberInRange: (number) => {
     const convertedNumber = Number(number);
 
-    if (convertedNumber !== 1 && convertedNumber !== 2) {
+    if (
+      convertedNumber !== GAME_RULES.restart &&
+      convertedNumber !== GAME_RULES.finish
+    ) {
       throw new Error(MESSAGE.isRestartNumberInRange);
     }
   },
