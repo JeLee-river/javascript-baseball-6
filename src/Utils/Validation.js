@@ -1,4 +1,14 @@
 const Validation = {
+  isNotEmptyString: (number) => {
+    const trimmedNumber = number.trim();
+
+    if (trimmedNumber === '') {
+      throw new Error(
+        '[ERROR] 공백이 포함되어 있습니다. 숫자는 연달아서 입력해주세요.',
+      );
+    }
+  },
+
   isNumber: (number) => {
     const convertedNumber = Number(number);
 
