@@ -1,3 +1,4 @@
+import { GAME_RESULT } from './Utils/Constants';
 import Validation from './Utils/Validation';
 
 class GameManager {
@@ -42,11 +43,11 @@ class GameManager {
     const { strike, ball } = this.#calculateResult(this.#numbers);
     const result = new Map();
     if (ball !== 0) {
-      result.set('볼', ball);
+      result.set(GAME_RESULT.ball, ball);
     }
 
     if (strike !== 0) {
-      result.set('스트라이크', strike);
+      result.set(GAME_RESULT.strike, strike);
     }
 
     return result;
