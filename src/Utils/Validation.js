@@ -19,6 +19,16 @@ const Validation = {
     }
   },
 
+  isAnswerNumberInRange: (number) => {
+    const convertedNumber = Number(number);
+
+    if (convertedNumber < 1 || convertedNumber > 9) {
+      throw new Error(
+        '[ERROR] 유효하지 않은 숫자입니다. 1이상 9이하의 숫자를 입력해주세요.',
+      );
+    }
+  },
+
   isValidLength: (numberArray) => {
     const convertedNumberArray = numberArray.map(Number);
 
