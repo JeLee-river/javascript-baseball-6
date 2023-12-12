@@ -19,8 +19,7 @@ const Validation = {
     }
   },
 
-  isValidLength: (numbers) => {
-    const numberArray = numbers.split('');
+  isValidLength: (numberArray) => {
     const convertedNumberArray = numberArray.map(Number);
 
     if (convertedNumberArray.length !== 3) {
@@ -30,8 +29,7 @@ const Validation = {
     }
   },
 
-  isDifferentNumber: (numbers) => {
-    const numberArray = numbers.split('');
+  isDifferentNumber: (numberArray) => {
     const convertedNumberArray = numberArray.map(Number);
     const numberSet = new Set([...convertedNumberArray]);
 
