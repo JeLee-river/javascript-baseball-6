@@ -1,4 +1,4 @@
-import { GAME_RESULT } from './Utils/Constants';
+import { GAME_RESULT, GAME_RULES } from './Utils/Constants';
 import Validation from './Utils/Validation';
 
 class GameManager {
@@ -37,6 +37,11 @@ class GameManager {
     });
 
     return baseballCounter;
+  }
+
+  isIncorrectAnswer() {
+    const { strike } = this.#calculateResult(this.#numbers);
+    return strike !== GAME_RULES.answerStrike;
   }
 
   getResult() {
