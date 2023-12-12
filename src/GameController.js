@@ -12,6 +12,9 @@ class GameController {
     Validation.isNumber(option);
     Validation.isRestartNumberInRange(option);
   }
-}
 
+  hasStart() {
+    return this.#restartOption === 1;
+  }
+}
 export default GameController;
