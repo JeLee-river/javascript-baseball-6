@@ -16,6 +16,10 @@ const OutputView = {
   printStartMessage() {
     Console.print(PLAY_MESSAGE.start);
   },
+
+  printFinishMessage() {
+    Console.print(PLAY_MESSAGE.finish);
+  },
 };
 
 export default OutputView;
