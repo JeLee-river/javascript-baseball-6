@@ -1,11 +1,25 @@
+import Validation from './Utils/Validation';
+
 class GameManager {
   #numbers;
 
   #answer;
 
   constructor(userNumbers, answer) {
+    this.#validate(userNumbers);
     this.#numbers = userNumbers;
     this.#answer = answer;
+  }
+
+  #validate(numbers) {
+    const numberArray = numbers.split('');
+    numberArray.forEach((number) => {
+      Validation.isNotEmptyString(number);
+      Validation.isNumber(number);
+    });
+
+    Validation.isValidLength(numberArray);
+    Validation.isDifferentNumber(numberArray);
   }
 
   #calculateResult(numbers) {
